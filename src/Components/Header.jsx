@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
@@ -107,115 +107,8 @@ const Header = () => {
   );
 };
 
-export default Header;
-=======
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import "./Header.css";
-
-const Header = () => {
-
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light navbar-insurance sticky-top shadow-sm">
-      <div className="container">
-
-        {/* Logo */}
-        <Link
-          className="navbar-brand d-flex align-items-center gap-2"
-          to="/"
-          onClick={() => scrollToSection("home")}
-        >
-          <span className="logo-icon">🛡️</span>
-          <span className="logo-text">Insurance</span>
-        </Link>
-
-        {/* Mobile Toggle */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        {/* Menu */}
-        <div className="collapse navbar-collapse" id="mainNavbar">
-
-          {/* CENTER LINKS */}
-          <ul className="navbar-nav mx-auto align-items-lg-center gap-lg-3">
-
-            <li className="nav-item">
-              <NavLink
-                className="nav-link"
-                to="/"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                Home
-              </NavLink>
-            </li>
-
-             <li className="nav-item">
-              <button className="nav-link btn-link" onClick={() => scrollToSection("services")}>
-                Services
-              </button>
-            </li>
 
 
-            <li className="nav-item">
-              <button className="nav-link btn-link" onClick={() => scrollToSection("about")}>
-                About
-              </button>
-            </li>
-
-            
-
-            <li className="nav-item">
-              <button className="nav-link btn-link" onClick={() => scrollToSection("auto-insurance")}>
-                Auto Insurance
-              </button>
-            </li>
-
-            <li className="nav-item">
-              <button className="nav-link btn-link" onClick={() => scrollToSection("life-insurance")}>
-                Life Insurance
-              </button>
-            </li>
-
-           
-
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">
-                Contact
-              </NavLink>
-            </li>
-
-
-          </ul>
-
-          {/* RIGHT CTA */}
-          <div className="d-lg-flex ms-lg-3">
-            <NavLink className="btn btn-quote text-white" to="/contact">
-              Get a Quote
-            </NavLink>
-          </div>
-
-
-        </div>
-      </div>
-    </nav>
-  );
-};
 
 export default Header;
->>>>>>> f1a97b7 (Add SVG logos and set up initial React application structure)
+
