@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ===============================
    HEADER – INSURANCE PREMIUM (ENHANCED)
 ================================ */
@@ -154,3 +155,161 @@
 section {
   scroll-margin-top: 90px; /* height of navbar */
 }
+=======
+/* ===============================
+   HEADER – INSURANCE PREMIUM (ENHANCED)
+================================ */
+
+.navbar-insurance {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 16px 0;
+  transition: all 0.3s ease;
+}
+
+/* subtle shadow on scroll (optional JS later) */
+.navbar-insurance.scrolled {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+   LOGO
+================================ */
+
+.logo-icon {
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+.logo-text {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #020617;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #020617, #0b3a6f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   NAV LINKS
+================================ */
+
+.navbar-insurance .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+  position: relative;
+  padding: 8px 6px;
+  transition: all 0.25s ease;
+}
+
+.navbar-insurance .nav-link:hover {
+  color: #2563eb;
+}
+
+/* underline animation */
+.navbar-insurance .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-insurance .nav-link:hover::after,
+.navbar-insurance .nav-link.active::after {
+  width: 100%;
+}
+
+/* ===============================
+   CTA BUTTON
+================================ */
+
+.btn-quote {
+  position: relative;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: #ffffff;
+  padding: 11px 26px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow:
+    0 10px 26px rgba(37, 99, 235, 0.35);
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* shine effect */
+.btn-quote::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: 0.6s;
+}
+
+.btn-quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
+  color: #ffffff;
+}
+
+.btn-quote:hover::after {
+  left: 130%;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 991px) {
+  .navbar-insurance {
+    padding: 14px 0;
+  }
+
+  .navbar-insurance .nav-item {
+    padding: 6px 0;
+  }
+
+  .navbar-insurance .nav-link::after {
+    display: none;
+  }
+
+  .btn-quote {
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+  }
+}
+.btn-link {
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+section {
+  scroll-margin-top: 90px; /* height of navbar */
+}
+>>>>>>> f1a97b7 (Add SVG logos and set up initial React application structure)
