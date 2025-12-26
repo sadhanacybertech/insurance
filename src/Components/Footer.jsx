@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./Footer.css";
 import {
@@ -24,7 +23,7 @@ const Footer = () => {
                             <p>
                                 Insurance offers financial protection against unexpected risks,
                                 ensuring security and peace of mind for
-                                individuals and businesses. 
+                                individuals and businesses.
                             </p>
                         </div>
 
@@ -72,7 +71,12 @@ const Footer = () => {
 
                 {/* Bottom */}
                 <div className="footer-bottom">
-                    <p>© {new Date().getFullYear()} Insurance . All Rights Reserved.</p>
+                    <p>© {new Date().getFullYear()} Insurance. All Rights Reserved.</p>
+
+                    {/* ✅ Added line */}
+                    <p className="footer-developed">
+                        Developed by <strong>Sadhana Cybertech (OPC) Pvt. Ltd.</strong>
+                    </p>
                 </div>
 
             </div>

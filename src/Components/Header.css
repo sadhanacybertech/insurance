@@ -155,3 +155,31 @@
 section {
   scroll-margin-top: 90px; /* height of navbar */
 }
+/* ================= HEADER MOBILE CENTER ================= */
+@media (max-width: 991px) {
+
+  /* center menu items */
+  .navbar-nav {
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item,
+  .navbar-nav .nav-link,
+  .navbar-nav .btn-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* spacing between items */
+  .navbar-nav .nav-link,
+  .navbar-nav .btn-link {
+    padding: 10px 0;
+  }
+
+  /* center CTA button */
+  .btn-quote {
+    margin: 12px auto 0;
+    display: inline-block;
+  }
+}

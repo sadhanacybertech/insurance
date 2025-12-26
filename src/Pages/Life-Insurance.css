@@ -1,0 +1,723 @@
+/* ================= HERO BASE ================= */
+.life-hero-dark {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* ================= OVERLAY ================= */
+.life-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(2, 23, 51, 0.92) 0%,
+      rgba(3, 32, 68, 0.9) 45%,
+      rgba(4, 45, 96, 0.85) 100%
+    );
+  z-index: 1;
+}
+
+/* ================= CONTENT ================= */
+.life-hero-dark .container {
+  position: relative;
+  z-index: 2;
+}
+
+.life-hero-pill {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #93c5fd;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 28px;
+}
+
+/* Heading */
+.life-hero-title {
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 26px;
+}
+
+.life-hero-title span {
+  color: #60a5fa;
+}
+
+/* Paragraph */
+.life-hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #dbeafe;
+  max-width: 880px;
+  margin: 0 auto 42px;
+}
+
+/* ================= ACTIONS ================= */
+.life-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.life-hero-btn {
+  padding: 14px 34px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Primary */
+.life-hero-btn.primary {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 16px 36px rgba(239,68,68,0.45);
+}
+
+.life-hero-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px rgba(239,68,68,0.55);
+}
+
+/* Secondary */
+.life-hero-btn.secondary {
+  border: 2px solid rgba(255,255,255,0.6);
+  color: #ffffff;
+  background: transparent;
+}
+
+.life-hero-btn.secondary span {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+.life-hero-btn.secondary:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .life-hero-title {
+    font-size: 2.6rem;
+  }
+
+  .life-hero-desc {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .life-hero-dark {
+    min-height: auto;
+    padding: 100px 0;
+  }
+
+  .life-hero-title {
+    font-size: 2.1rem;
+  }
+
+  .life-hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ================= ROOT ================= */
+.features-pro {
+  position: relative;
+  padding: 140px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  overflow: hidden;
+}
+
+/* background glow shapes */
+.features-pro::before,
+.features-pro::after {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.features-pro::before {
+  background: rgba(37, 99, 235, 0.18);
+  top: -200px;
+  left: -200px;
+}
+
+.features-pro::after {
+  background: rgba(96, 165, 250, 0.2);
+  bottom: -220px;
+  right: -220px;
+}
+
+/* ================= HEADER ================= */
+.features-pro-tag {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.1);
+  margin-bottom: 16px;
+}
+
+.features-pro-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #020617;
+  margin-bottom: 14px;
+}
+
+.features-pro-title span {
+  color: #2563eb;
+}
+
+.features-pro-desc {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* ================= CARD ================= */
+.feature-pro-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 26px;
+  padding: 48px 28px;
+  height: 100%;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transition: all 0.45s cubic-bezier(.4, 0, .2, 1);
+  animation: floatUp 0.9s ease forwards;
+  opacity: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* stagger animation */
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+
+/* ================= CARD HOVER EFFECT ================= */
+.feature-pro-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 26px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(37,99,235,0),
+    rgba(96,165,250,0)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: all 0.4s ease;
+}
+
+.feature-pro-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  transform: rotate(20deg);
+  transition: all 0.7s ease;
+}
+
+.feature-pro-card:hover::before {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #60a5fa
+  );
+}
+
+.feature-pro-card:hover::after {
+  left: 130%;
+}
+
+.feature-pro-card:hover {
+  transform: translateY(-16px) scale(1.03);
+  box-shadow:
+    0 55px 130px rgba(37,99,235,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.9);
+}
+
+/* ================= ICON ================= */
+.icon-glow {
+  width: 74px;
+  height: 74px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.icon-glow::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 28px;
+  background: radial-gradient(circle, rgba(96,165,250,0.45), transparent 65%);
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.icon-glow svg {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+/* icon hover */
+.feature-pro-card:hover .icon-glow {
+  transform: scale(1.1) rotate(6deg);
+}
+
+.feature-pro-card:hover .icon-glow::after {
+  animation: pulseGlow 1.4s infinite;
+}
+
+/* ================= TEXT ================= */
+.feature-pro-card h5 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #020617;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.feature-pro-card p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  transition: color 0.3s ease;
+}
+
+.feature-pro-card a {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.feature-pro-card:hover h5 {
+  color: #2563eb;
+}
+
+.feature-pro-card:hover p {
+  color: #334155;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .features-pro-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .features-pro {
+    padding: 100px 0;
+  }
+
+  .features-pro-title {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* ================= ROOT ================= */
+.why-life-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* ================= HEADER ================= */
+.why-life-tag {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #2563eb;
+  background: #e0ecff;
+  margin-bottom: 14px;
+}
+
+.why-life-title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #020617;
+  margin-bottom: 14px;
+}
+
+.why-life-title span {
+  color: #2563eb;
+}
+
+.why-life-desc {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* ================= LEFT & RIGHT POINT CARDS ================= */
+.why-life-point {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: #ffffff;
+  padding: 26px 28px;
+  border-radius: 22px;
+  margin-bottom: 22px;
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.08),
+    inset 0 0 0 1px rgba(15,23,42,0.04);
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+  overflow: hidden;
+}
+
+/* Gradient strip */
+.why-life-point::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #2563eb, #60a5fa);
+  border-radius: 22px 0 0 22px;
+}
+
+/* Hover */
+.why-life-point:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 30px 80px rgba(37,99,235,0.25),
+    inset 0 0 0 1px rgba(37,99,235,0.12);
+}
+
+/* RIGHT side alignment */
+.why-life-point.right {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.why-life-point.right::before {
+  left: auto;
+  right: 0;
+  border-radius: 0 22px 22px 0;
+}
+
+/* ================= ICON ================= */
+.icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 12px 30px rgba(37,99,235,0.35);
+}
+
+.icon-box svg {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+/* ================= TEXT ================= */
+.why-life-point h5 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #020617;
+  margin-bottom: 6px;
+}
+
+.why-life-point p {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* ================= CENTER CARD ================= */
+.why-life-highlight {
+  background: linear-gradient(135deg, #021a33, #0a4b6f);
+  color: #ffffff;
+  border-radius: 28px;
+  padding: 56px 42px;
+  box-shadow: 0 45px 110px rgba(2,26,51,0.45);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why-life-highlight h3 {
+  font-size: 1.9rem;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.why-life-highlight p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #dbeafe;
+  margin-bottom: 26px;
+}
+
+/* ================= CTA ================= */
+.why-life-btn {
+  align-self: center;
+  background: #ef4444;
+  color: #ffffff;
+  padding: 14px 34px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 16px 36px rgba(239,68,68,0.45);
+  transition: all 0.3s ease;
+}
+
+.why-life-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 60px rgba(239,68,68,0.55);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .why-life-point,
+  .why-life-point.right {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .why-life-point::before,
+  .why-life-point.right::before {
+    left: 0;
+    right: auto;
+    border-radius: 22px 0 0 22px;
+  }
+}
+
+@media (max-width: 575px) {
+  .why-life-section {
+    padding: 90px 0;
+  }
+
+  .why-life-title {
+    font-size: 1.9rem;
+  }
+
+  .why-life-highlight {
+    padding: 40px 28px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+/* ================= ROOT ================= */
+.life-cta-light {
+  padding: 90px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ================= TEXT ================= */
+.life-cta-light-tag {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #2563eb;
+  background: #e0ecff;
+  margin-bottom: 14px;
+}
+
+.life-cta-light-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: #020617;
+}
+
+.life-cta-light-title span {
+  color: #2563eb;
+}
+
+.life-cta-light-desc {
+  max-width: 620px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* ================= ACTIONS ================= */
+.life-cta-light-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* BUTTON BASE */
+.life-cta-light-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* PRIMARY */
+.life-cta-light-btn.primary {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 16px 36px rgba(239,68,68,0.35);
+}
+
+.life-cta-light-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 60px rgba(239,68,68,0.45);
+}
+
+/* SECONDARY */
+.life-cta-light-btn.secondary {
+  background: #ffffff;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.life-cta-light-btn.secondary:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .life-cta-light-title {
+    font-size: 2.2rem;
+  }
+
+  .life-cta-light-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .life-cta-light {
+    padding: 75px 0;
+    text-align: center;
+  }
+
+  .life-cta-light-title {
+    font-size: 1.9rem;
+  }
+
+  .life-cta-light-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

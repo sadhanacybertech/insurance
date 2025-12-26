@@ -24,6 +24,7 @@ import WhatsAppChat from "../Components/WhatsappChat";
 import lifeImg from "../assets/life-benefits.png";
 
 import dots from "../assets/dots.webp";
+import { Link } from "react-router-dom";
 const images = [img1, img2, img3];
 
 const Home = () => {
@@ -39,7 +40,7 @@ const Home = () => {
 
     return (
         <main>
-            <WhatsAppChat/>
+            <WhatsAppChat />
             <section id="home"
                 className="hero-bg-img"
                 style={{ backgroundImage: `url(${images[currentImage]})` }}
@@ -72,9 +73,9 @@ const Home = () => {
 
                             {/* Actions */}
                             <div className="hero-actions">
-                                <button className="btn btn-outline-light">
+                                <Link to="/contact" className="btn btn-outline-light">
                                     Explore Solutions
-                                </button>
+                                </Link>
                             </div>
 
                         </div>
@@ -83,109 +84,109 @@ const Home = () => {
             </section>
 
 
-    <section className="insurance-services-section" id="services">
-      <div className="container">
+            <section className="insurance-services-section" id="services">
+                <div className="container">
 
-        {/* SECTION HEADER */}
-        <div className="row mb-5">
-          <div className="col-lg-8 mx-auto text-center">
-            <span className="services-tag">Our Services</span>
-            <h2 className="services-title fw-bold" style={{fontFamily:"-moz-initial"}}>
-              Insurance Solutions Tailored for You
-            </h2>
-            <p className="services-desc">
-              We offer comprehensive and affordable insurance plans designed to
-              protect what matters most to you your life, health, vehicle, home,
-              and business.
-            </p>
-          </div>
-        </div>
+                    {/* SECTION HEADER */}
+                    <div className="row mb-5">
+                        <div className="col-lg-8 mx-auto text-center">
+                            <span className="services-tag">Our Services</span>
+                            <h2 className="services-title fw-bold" style={{ fontFamily: "-moz-initial" }}>
+                                Insurance Solutions Tailored for You
+                            </h2>
+                            <p className="services-desc">
+                                We offer comprehensive and affordable insurance plans designed to
+                                protect what matters most to you your life, health, vehicle, home,
+                                and business.
+                            </p>
+                        </div>
+                    </div>
 
-        {/* SERVICES GRID */}
-        <div className="row g-4">
+                    {/* SERVICES GRID */}
+                    <div className="row g-4">
 
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card">
-              <div className="service-icon blue">
-                <FaHeartbeat />
-              </div>
-              <h5>Health Insurance</h5>
-              <p>
-                Cashless hospitalization and medical coverage to keep you and
-                your family protected.
-              </p>
-            </div>
-          </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="service-card">
+                                <div className="service-icon blue">
+                                    <FaHeartbeat />
+                                </div>
+                                <h5>Health Insurance</h5>
+                                <p>
+                                    Cashless hospitalization and medical coverage to keep you and
+                                    your family protected.
+                                </p>
+                            </div>
+                        </div>
 
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card">
-              <div className="service-icon green">
-                <FaUserShield />
-              </div>
-              <h5>Life Insurance</h5>
-              <p>
-                Secure your family’s future with flexible life insurance plans
-                and long-term benefits.
-              </p>
-            </div>
-          </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="service-card">
+                                <div className="service-icon green">
+                                    <FaUserShield />
+                                </div>
+                                <h5>Life Insurance</h5>
+                                <p>
+                                    Secure your family’s future with flexible life insurance plans
+                                    and long-term benefits.
+                                </p>
+                            </div>
+                        </div>
 
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card">
-              <div className="service-icon orange">
-                <FaCar />
-              </div>
-              <h5>Auto Insurance</h5>
-              <p>
-                Comprehensive coverage for your vehicle against accidents,
-                theft, and damages.
-              </p>
-            </div>
-          </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="service-card">
+                                <div className="service-icon orange">
+                                    <FaCar />
+                                </div>
+                                <h5>Auto Insurance</h5>
+                                <p>
+                                    Comprehensive coverage for your vehicle against accidents,
+                                    theft, and damages.
+                                </p>
+                            </div>
+                        </div>
 
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card">
-              <div className="service-icon purple">
-                <FaHome />
-              </div>
-              <h5>Home Insurance</h5>
-              <p>
-                Protect your home and belongings from unexpected risks and
-                natural disasters.
-              </p>
-            </div>
-          </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="service-card">
+                                <div className="service-icon purple">
+                                    <FaHome />
+                                </div>
+                                <h5>Home Insurance</h5>
+                                <p>
+                                    Protect your home and belongings from unexpected risks and
+                                    natural disasters.
+                                </p>
+                            </div>
+                        </div>
 
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card">
-              <div className="service-icon cyan">
-                <FaBriefcaseMedical />
-              </div>
-              <h5>Business Insurance</h5>
-              <p>
-                Tailored insurance solutions to safeguard your business assets
-                and operations.
-              </p>
-            </div>
-          </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="service-card">
+                                <div className="service-icon cyan">
+                                    <FaBriefcaseMedical />
+                                </div>
+                                <h5>Business Insurance</h5>
+                                <p>
+                                    Tailored insurance solutions to safeguard your business assets
+                                    and operations.
+                                </p>
+                            </div>
+                        </div>
 
-          <div className="col-lg-4 col-md-6">
-            <div className="service-card">
-              <div className="service-icon red">
-                <FaHandsHelping />
-              </div>
-              <h5>Claims Assistance</h5>
-              <p>
-                Dedicated support to ensure smooth and fast claim settlements
-                without hassle.
-              </p>
-            </div>
-          </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="service-card">
+                                <div className="service-icon red">
+                                    <FaHandsHelping />
+                                </div>
+                                <h5>Claims Assistance</h5>
+                                <p>
+                                    Dedicated support to ensure smooth and fast claim settlements
+                                    without hassle.
+                                </p>
+                            </div>
+                        </div>
 
-        </div>
+                    </div>
 
-      </div>
-    </section>
+                </div>
+            </section>
 
 
 
@@ -277,7 +278,7 @@ const Home = () => {
                         <div className="col-lg-8 mx-auto text-center">
                             <span className="section-tag">Affordable & Accessible</span>
 
-                            <h2 className="section-title mt-2" style={{fontFamily:"-moz-initial"}}>
+                            <h2 className="section-title mt-2" style={{ fontFamily: "-moz-initial" }}>
                                 Affordable and Accessible <br />
                                 Insurance Coverage for Everyone
                             </h2>
@@ -351,7 +352,7 @@ const Home = () => {
                         <div className="col-lg-8 mx-auto text-center">
                             <span className="feature-tag">Auto Insurance</span>
 
-                            <h2 className="feature-title fw-bold" style={{fontFamily:"-moz-initial"}}>
+                            <h2 className="feature-title fw-bold" style={{ fontFamily: "-moz-initial" }}>
                                 Smart & Reliable Auto Insurance Coverage
                             </h2>
 
